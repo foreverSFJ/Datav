@@ -1,0 +1,218 @@
+#data-view {
+  width: 100%;
+  height: 100%;
+  background-color: #030409;
+  color: #fff;
+
+  #dv-full-screen-container {
+    background-image: url('../components/datav/img/bg.png');
+    background-size: 100% 100%;
+    box-shadow: 0 0 3px blue;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .mh-left {
+      font-size: 20px;
+      color: rgb(1,134,187);
+
+      a:visited {
+        color: rgb(1,134,187);
+      }
+    }
+
+    .mh-middle {
+      font-size: 30px;
+    }
+
+    .mh-left, .mh-right {
+      width: 450px;
+    }
+  }
+
+  .main-container {
+    height: calc(~"100% - 80px");
+
+    .border-box-content {
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+    }
+  }
+
+  .left-chart-container {
+    width: 22%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    .border-box-content {
+      flex-direction: column;
+    }
+
+    .left-chart-header{
+      text-align: center;
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      // margin-bottom: 10px;
+    }
+  }
+
+  .midd-main-container {
+    width: 56%;
+    padding-left: 5px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  .midd-top-container {
+    height: 65%;
+    display: flex;
+  }
+
+  .midd-bottom-container {
+    height: 35%;
+    flex-direction: row;
+  }
+
+  .right-chart-container {
+    width: 22%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .right-container-1, .right-container-2 {
+    height: 50%;
+  }
+
+
+  .index-time{
+    width: 120px; 
+    height: 50px; 
+    line-height: 50px; 
+    text-align:center;
+    margin-left:200px;
+  }
+
+  .label-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .label-item {
+      margin: 5px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+  
+      div {
+        width: 12px;
+        height: 12px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .center-cmp {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+  
+    .cc-header {
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 32px;
+    }
+  
+    .cc-details {
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      font-size: 32px;
+      align-items: center;
+  
+      .card {
+        background-color: rgba(4,49,128,.6);
+        color: #08e5ff;
+        height: 70px;
+        width: 70px;
+        font-size: 45px;
+        font-weight: bold;
+        line-height: 70px;
+        text-align: center;
+        margin: 10px;
+      }
+    }
+  
+    .cc-main-container {
+      position: relative;
+      flex: 1;
+      display: flex;
+  
+      .ccmc-middle {
+        width: 40%;
+        height: 100%;
+  
+        .active-ring-name {
+          font-size: 15px !important;
+        }
+      }
+  
+      .ccmc-left, .ccmc-right {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 24px;
+  
+        span {
+          font-size: 40px;
+          font-weight: bold;
+        }
+  
+        .station-info {
+          height: 50px;
+          display: flex;
+          align-items: center;
+        }
+      }
+  
+      .ccmc-left {
+        align-items: flex-end;
+  
+        span {
+          margin-left: 20px;
+        }
+      }
+  
+      .ccmc-right {
+        align-items: flex-start;
+  
+        span {
+          margin-right: 20px;
+        }
+      }
+    }
+  
+    .label-tag {
+      position: absolute;
+      width: 500px;
+      height: 30px;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }  
+  }
+}

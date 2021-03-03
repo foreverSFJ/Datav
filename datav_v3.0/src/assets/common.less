@@ -1,0 +1,141 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+.left-chart {
+  width: 100%;
+  display: flex;
+  height: 31%;
+  flex-direction: column;
+
+  .lc-header {
+    height: 40px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .lc-detal {
+    height: 30px;
+
+    b {
+      font-size: 16px;      
+      width: 35%;
+      text-align: right;
+      display:inline-block;
+    }
+    span {
+      width: 50%;
+      color: #096dd9;
+      font-weight: bold;
+      font-size: 30px;
+      text-align: right;
+      display:inline-block;
+    }
+    font {
+      width: 15%;
+      text-align: center;
+      display:inline-block;
+    }
+  }
+
+  .lc-chart {
+    flex: 1;
+  }
+}
+
+.right-chart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .rc-header {
+    height: 40px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .left {
+    width: 35%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+      padding-top: 5px;
+      font-size: 24px;
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px;
+    }
+      
+    .number {
+      font-size: 34px;
+      color: #096dd9;
+      text-align: center;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+
+    .title {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+
+  .right {
+    width: 65%;
+    height: 100%;
+    padding: 0 -5px;
+    flex: 1;
+    
+  }
+}
+
+.bottom-chart {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .bc-header {
+    height: 40px;
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .bc-detal {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font {
+      width: 60%;
+      font-size: 25px;
+      text-align: center;
+    }
+    span {
+      width: 40%;
+      height: 100%;
+      color: #096dd9;
+      font-weight: bold;
+      font-size: 35px;
+      text-align: center;
+    }
+  }
+
+  .bc-chart {
+    flex: 1;
+    font-size: 5px;
+  }
+}
