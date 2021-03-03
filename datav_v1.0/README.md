@@ -1,16 +1,21 @@
-<h1 align="center">Electronic-File</h1>
+<h1 align="center">前端安装说明</h1>
 
-## Project setup
+## 1. 下载源码
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn run dev
+git@github.com:foreverSFJ/Datav.git
 ```
 
-### Compiles and minifies for production
+## 2. 安装依赖
 ```
-yarn run build
+npm install
+```
+
+## 3. 运行
+```
+npm run dev
+```
+
+## 4. 打包
+```
+npm run build
 ```
