@@ -42,9 +42,9 @@ export default {
               style: {
                 fontSize: 10,
                 fill: '#fff'
-              }
-            },
-            showOriginValue: false
+              },
+              show: true
+            }
           }
         ],
         color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b']

@@ -10,6 +10,7 @@ export default {
   name: 'RightChart2',
   data () {
     return {
+      timer: null,
       config: {
         modelname: '库区使用率',
         title: '库区使用率',
@@ -26,7 +27,7 @@ export default {
           ['库区使用率', '10%']
         ],
         align: ['left'],
-        columnWidth: ['70%','30%'],
+        columnWidth: [160],
         oddRowBGC: 'rgba(9, 37, 50, 0.4)',
         evenRowBGC: 'rgba(10, 32, 50, 0.3)'
       }
