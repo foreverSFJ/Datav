@@ -10,19 +10,21 @@
 
 <script>
 export default {
-  name: 'Bottom1',
+  name: 'Bottom3',
   props: [''],
   data () {
     return {
       timer: null,
       config: {
-        modelname: '整件拣货',
-        title: '整件拣货：', 
+        modelName: '散件拣货',
+        title: '散件拣货：',
         title_count: '996',
         data: [
-              { name: '张思', value: '10' },
-              { name: '张柳', value: '17' },
-              { name: '张航', value: '100' }
+              { name: '张思', value: 983 },
+              { name: '张柳', value: 352 },
+              { name: '张航', value: 655 },
+              { name: '张扎根', value: 454 },
+              { name: '张翰', value: 52 }
             ],
         showValue: true,
         fontSize: 12,
@@ -45,9 +47,9 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Bottom', parameter: 'wholePicking', type: 'config'}).then(resp => {
+      this.$api.post('/datav', { method: 'Bottom', parameter: 'partPicking', type: 'config' }).then(resp => {
         this.config = resp.config
-       })
+      })
     }
   }
 }

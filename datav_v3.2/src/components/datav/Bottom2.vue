@@ -1,13 +1,13 @@
 <template>
-  <div class="right-chart">
-      <div class="rc-header">{{config.modelname}}</div>
+  <div class="bottom-chart">
+      <div class="bc-header">{{config.modelname}}</div>
       <dv-scroll-board :config="config" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RightChart1',
+  name: 'Bottom1',
   data () {
     return {
       config: {
@@ -47,7 +47,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Right', parameter: 'WarehouseOut', type: 'config' }).then(resp => {
+      this.$api.post('/datav', { method: 'Bottom', parameter: 'WarehouseOut', type: 'config_scroll' }).then(resp => {
         this.config = resp.config
       })
     }

@@ -11,6 +11,7 @@
 <script>
 export default {
   name: 'Bottom1',
+  props: [''],
   data () {
     return {
       timer: null,
@@ -25,7 +26,9 @@ export default {
               { name: '张扎根', value: 454 },
               { name: '张翰', value: 52 }
             ],
-        showValue: true
+        showValue: true,
+        fontSize: 12,
+        columnColor: 'rgba(0, 194, 255, 0.4)'
       }
     }
   },
