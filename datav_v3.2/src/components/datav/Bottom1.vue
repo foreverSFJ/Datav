@@ -20,9 +20,9 @@ export default {
         title: '整件拣货：', 
         title_count: '996',
         data: [
-              { name: '张思', value: '10' },
-              { name: '张柳', value: '17' },
-              { name: '张航', value: '100' }
+              { name: '张思', value: 10 },
+              { name: '张柳', value: 17 },
+              { name: '张航', value: 100 }
             ],
         showValue: true,
         fontSize: 12,
