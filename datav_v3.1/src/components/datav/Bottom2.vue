@@ -59,7 +59,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Bottom', parameter: 'outStatistics', type: 'option' }).then(resp => {
+      this.$api.post('/datav', { type: 'pie', parameter: 'outStatistics', config: 'option' }).then(resp => {
         this.option = resp.option
       })
     }

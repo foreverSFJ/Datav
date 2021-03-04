@@ -1,50 +1,35 @@
 <template>
-  <div class="bottom-chart" v-if="option">
-    <div class="bc-detal">
-      <font>{{option.title}}</font>
-      <span>{{option.title_count}}</span>
-    </div>
-    <dv-charts class="bc-chart" :option="option" />
+  <div class="bottom-chart">
+      <div class="bc-header">{{config.modelname}}</div>
+      <dv-scroll-board :config="config" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Bottom3',
-  props: [''],
+  name: 'Bottom1',
   data () {
     return {
       timer: null,
-      option: {
-        modelname: '散件复核',
-        title: '散件复核：',
-        title_count: '596',
-        series: [
-          {
-            type: 'pie',
-            data: [
-              { name: '张思', value: 983 },
-              { name: '张柳', value: 352 },
-              { name: '张航', value: 655 },
-              { name: '张扎根', value: 454 },
-              { name: '张翰', value: 52 }
-            ],
-            radius: ['35%', '65%'],
-            insideLabel: {
-              show: false
-            },
-            outsideLabel: {
-              labelLineEndLength: 10,
-              formatter: '{name}\n{value}',
-              style: {
-                fontSize: 14,
-                fill: '#fff'
-              }
-            },
-            showOriginValue: true
-          }
-        ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b']
+      config: {
+        modelname: '库区使用率',
+        title: '库区使用率',
+        title_count: 'null',
+        data: [
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%'],
+           ['库区使用率', '10%']
+        ], 
+        columnWidth: [160],
+        align: ['left'],
+        oddRowBGC: 'rgba(9, 37, 50, 0.4)',
+        evenRowBGC: 'rgba(10, 32, 50, 0.3)'
       }
     }
   },
@@ -63,8 +48,8 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Bottom',  parameter: 'partChecking', type: 'option' }).then(resp => {
-        this.option = resp.option
+      this.$api.post('/datav', { type: 'scrollBoard', parameter: 'WarehouseUsage', config: 'config' }).then(resp => {
+        this.config = resp.config
       })
     }
   }

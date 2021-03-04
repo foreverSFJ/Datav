@@ -47,7 +47,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Right', parameter: 'WarehouseOut', type: 'config' }).then(resp => {
+      this.$api.post('/datav', { type: 'scrollBoard', parameter: 'WarehouseOut', config: 'config' }).then(resp => {
         this.config = resp.config
       })
     }

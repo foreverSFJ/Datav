@@ -10,6 +10,7 @@ export default {
   name: 'Bottom1',
   data () {
     return {
+      timer: null,
       config: {
         modelname: '库区出库统计',
         title: '库区出库统计',
@@ -47,7 +48,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Bottom', parameter: 'WarehouseOut', type: 'config_scroll' }).then(resp => {
+      this.$api.post('/datav', { type: 'scrollBoard', parameter: 'WarehouseOut', config: 'config' }).then(resp => {
         this.config = resp.config
       })
     }

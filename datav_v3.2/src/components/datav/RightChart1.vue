@@ -41,9 +41,7 @@ export default {
                 fontSize: 12,
                 fill: '#fff'
               }
-            },
-            roseType: true,
-            roseSort: true
+            }
           }
         ],
         color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b']
@@ -65,7 +63,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Right', parameter: 'internalAdjust', type: 'option' }).then(resp => {
+      this.$api.post('/datav', { type: 'pie', parameter: 'internalAdjust', config: 'option' }).then(resp => {
         this.option = resp.option
       })
     }

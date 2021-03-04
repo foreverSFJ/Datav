@@ -45,7 +45,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Bottom', parameter: 'wholePicking', type: 'config'}).then(resp => {
+      this.$api.post('/datav', { type: 'conicalColumn', parameter: 'wholePicking', config: 'config'}).then(resp => {
         this.config = resp.config
        })
     }

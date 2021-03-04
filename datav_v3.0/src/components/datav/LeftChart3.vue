@@ -48,7 +48,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Left', parameter: 'totalShelves', type: 'config' }).then(resp => {
+      this.$api.post('/datav', { type: 'capsule', parameter: 'totalShelves', config: 'config' }).then(resp => {
         this.config = resp.config
       })
     }

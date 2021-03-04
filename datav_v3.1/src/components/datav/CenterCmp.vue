@@ -96,7 +96,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Main', parameter: 'CenterCmp', type: 'config_center' }).then(resp => {
+      this.$api.post('/datav', { type: 'Main', parameter: 'CenterCmp', config: 'config_center' }).then(resp => {
         this.main = resp.main
         this.config = resp.config
         this.labelConfig = resp.labelConfig

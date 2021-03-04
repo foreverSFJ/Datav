@@ -65,7 +65,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Right', parameter: 'internalAdjust', type: 'option' }).then(resp => {
+      this.$api.post('/datav', { type: 'pie', parameter: 'internalAdjust', config: 'option' }).then(resp => {
         this.option = resp.option
       })
     }

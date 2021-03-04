@@ -29,7 +29,7 @@ export default {
               { name: '张扎根', value: 454 },
               { name: '张翰', value: 52 }
             ],
-            radius: ['35%', '65%'],
+            radius: '50%',
             insideLabel: {
               show: false
             },
@@ -63,7 +63,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Bottom',  parameter: 'partChecking', type: 'option' }).then(resp => {
+      this.$api.post('/datav', { type: 'pie',  parameter: 'partChecking', config: 'option' }).then(resp => {
         this.option = resp.option
       })
     }

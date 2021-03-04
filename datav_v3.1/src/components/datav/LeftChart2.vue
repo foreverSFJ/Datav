@@ -45,7 +45,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Left', parameter: 'totalacceptance', type: 'config'}).then(resp => {
+      this.$api.post('/datav', { type: 'capsule', parameter: 'totalacceptance', config: 'config'}).then(resp => {
         this.config = resp.config
       })
     }

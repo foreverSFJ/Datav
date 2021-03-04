@@ -106,7 +106,7 @@ export default {
 
   methods: {
     getdata () {
-      this.$api.post('/datav', { method: 'Main' , parameter: 'index', type: 'config'}).then(resp => {
+      this.$api.post('/datav', { type: 'Main' , parameter: 'index', config: 'config'}).then(resp => {
         this.config = resp.config
       })
     }
