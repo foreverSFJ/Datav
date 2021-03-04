@@ -24,7 +24,7 @@ module.exports = {
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
   publicPath: './',
-  outputDir: 'datav3.2',
+  outputDir: 'D:/Users/SFJ/Desktop/WMS_Product/datav3.2',
   assetsDir: 'static',
   lintOnSave: false,
   // lintOnSave: process.env.NODE_ENV === 'development',
